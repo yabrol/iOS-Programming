@@ -36,6 +36,10 @@
 - (IBAction)PresentTableViewButtonPressed:(id)sender {
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.myTableViewController];
     
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(dismissModalViewControllerAnimated:)];
+    
+    [self.myTableViewController.navigationItem setRightBarButtonItem:doneButton];
+    
 //    [self presentViewController:self.myTableViewController animated:YES completion:nil];
     
     [self presentViewController:navController animated:YES completion:nil];
