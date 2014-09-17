@@ -36,7 +36,10 @@
 - (IBAction)PresentTableViewButtonPressed:(id)sender {
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.myTableViewController];
     
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(dismissModalViewControllerAnimated:)];
+//    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(dismissModalViewControllerAnimated:)];
+    
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(myCustomSelector:)]; //don't need last colon
+
     
     [self.myTableViewController.navigationItem setRightBarButtonItem:doneButton];
     
@@ -45,6 +48,12 @@
     [self presentViewController:navController animated:YES completion:nil];
     
 }
+
+- (void) myCustomSelector: (id) sender{
+    NSLog(@"donion rings");
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (IBAction)pressedSegmentedViewController:(id)sender {
 //    int n = self.mySegmentedController.selectedSegmentIndex;
     UISegmentedControl *control = (UISegmentedControl *) sender;
