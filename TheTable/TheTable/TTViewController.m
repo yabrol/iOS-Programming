@@ -12,6 +12,7 @@
 @interface TTViewController ()
 
 @property (nonatomic, strong) TTTableViewController *myTableViewController;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *mySegmentedController;
 
 @end
 
@@ -41,20 +42,12 @@
     
 }
 - (IBAction)pressedSegmentedViewController:(id)sender {
-    UISegmentedControl *segmentedControl = (UISegmentedControl *) sender;
-    NSInteger selectedSegment = segmentedControl.selectedSegmentIndex;
+//    int n = self.mySegmentedController.selectedSegmentIndex;
+    UISegmentedControl *control = (UISegmentedControl *) sender;
+    int n = control.selectedSegmentIndex;
+    NSLog(@"%d", n);
     
-    if (selectedSegment == 0) {
-        //toggle the correct view to be visible
-        [firstView setHidden:NO];
-        [secondView setHidden:YES];
-    }
-    else{
-        //toggle the correct view to be visible
-        [firstView setHidden:YES];
-        [secondView setHidden:NO];
-    }
-}
+     }
 
 - (void)didReceiveMemoryWarning
 {
