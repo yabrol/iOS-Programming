@@ -30,7 +30,9 @@
 }
 
 -(void) dismiss{
-    
+    [self dismissViewControllerAnimated:YES completion:^{
+        NSLog(@"Aaaaaaand...it's gone.");
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -90,7 +92,8 @@
     NSString *mainText = [itemDictionary objectForKey:@"mainText"];
     NSString *detailText = [itemDictionary objectForKey:@"detailText"];
     
-    
+    cell.textLabel.text = mainText;
+    cell.detailTextLabel.text = detailText;
     
     // Configure the cell...
     

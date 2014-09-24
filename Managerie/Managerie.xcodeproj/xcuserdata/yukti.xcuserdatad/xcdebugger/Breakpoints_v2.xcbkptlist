@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Managerie/ViewController.m"
-            timestampString = "433205608.524698"
+            timestampString = "433208739.303527"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "-addToListButtonPressed:"
             landmarkType = "5">
          </BreakpointContent>
