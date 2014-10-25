@@ -34,7 +34,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2064" y="-415"/>
+            <point key="canvasLocation" x="1384" y="-231"/>
         </scene>
         <!--Image-->
         <scene sceneID="wg7-f3-ORb">
@@ -66,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2064" y="370"/>
+            <point key="canvasLocation" x="1384" y="554"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="AGj-Tf-bEX">
@@ -88,8 +88,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EP6-or-v3N">
+                                <rect key="frame" x="139" y="178" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushedLoginButton:" destination="XIp-ey-ZBe" eventType="touchUpInside" id="TPY-nt-8Rk"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fTU-pj-b0C">
-                                <rect key="frame" x="186" y="212" width="55" height="30"/>
+                                <rect key="frame" x="193" y="211" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -99,31 +109,25 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Account? " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Bv-oO-Ath">
-                                <rect key="frame" x="44" y="216" width="106" height="21"/>
+                                <rect key="frame" x="62" y="215" width="106" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EP6-or-v3N">
-                                <rect key="frame" x="139" y="178" width="43" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Log In">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pushedLoginButton:" destination="XIp-ey-ZBe" eventType="touchUpInside" id="TPY-nt-8Rk"/>
-                                    <segue destination="Ss5-cg-DdI" kind="push" identifier="LoginSegue" id="64r-KQ-iu7"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="I7f-pg-1eO"/>
+                    <connections>
+                        <outlet property="passwordText" destination="DXa-9n-q98" id="xzG-k5-JXl"/>
+                        <outlet property="usernameText" destination="MJq-Qs-nkH" id="wBR-wK-XxL"/>
+                        <segue destination="Ss5-cg-DdI" kind="push" id="4Wk-8w-6ka"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fTT-jd-lvE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-514" y="132"/>
+            <point key="canvasLocation" x="-408" y="132"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -143,7 +147,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1638" y="-32"/>
+            <point key="canvasLocation" x="958" y="152"/>
         </scene>
         <!--Sign Up Controller-->
         <scene sceneID="TkX-dt-cmd">
@@ -166,30 +170,46 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="viR-GB-8KK">
-                                <rect key="frame" x="133" y="233" width="55" height="30"/>
+                                <rect key="frame" x="133" y="178" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="pushedSignUpButton:" destination="IEU-6L-aPg" eventType="touchUpInside" id="PwT-p9-hXs"/>
-                                    <segue destination="Ss5-cg-DdI" kind="push" identifier="LoginSignupSegue" id="Fww-1O-Suf"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" id="epp-RU-E1N">
-                                <rect key="frame" x="16" y="188" width="288" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UQZ-zj-Aeo">
+                                <rect key="frame" x="208" y="216" width="43" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                            </textField>
+                                <state key="normal" title="Log In">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushedLoginButton:" destination="XIp-ey-ZBe" eventType="touchUpInside" id="wvK-fD-SKy"/>
+                                    <segue destination="XIp-ey-ZBe" kind="modal" id="5bi-uE-B2J"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have Account? " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CnZ-S0-140">
+                                <rect key="frame" x="70" y="220" width="123" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="vz0-V0-2ks"/>
+                    <connections>
+                        <outlet property="passwordText" destination="IKT-Oi-8qb" id="oml-Ve-fh2"/>
+                        <outlet property="userNameText" destination="hUC-Sf-MGh" id="AXO-pm-EU4"/>
+                        <segue destination="Ss5-cg-DdI" kind="push" identifier="LoginSignupSegue" id="8x7-9n-2UY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LtM-8E-OVY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="610" y="-338"/>
+            <point key="canvasLocation" x="754" y="-762"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Hft-sS-o9a">
@@ -200,7 +220,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="l9X-Mx-ogt">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="l9X-Mx-ogt">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l9X-Mx-ogt" id="XpD-mT-KKj">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -219,7 +239,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Cp-n0-Y14" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1156" y="-32"/>
+            <point key="canvasLocation" x="370" y="132"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Cn-2x-caT">
@@ -255,7 +275,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kbw-xu-2w9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="78" y="-338"/>
+            <point key="canvasLocation" x="54" y="-762"/>
         </scene>
     </scenes>
     <resources>
@@ -268,6 +288,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Fww-1O-Suf"/>
+        <segue reference="5bi-uE-B2J"/>
+        <segue reference="8x7-9n-2UY"/>
     </inferredMetricsTieBreakers>
 </document>

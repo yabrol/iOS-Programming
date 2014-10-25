@@ -9,6 +9,8 @@
 #import "SignUpController.h"
 
 @interface SignUpController ()
+@property (strong, nonatomic) IBOutlet UITextField *userNameText;
+@property (strong, nonatomic) IBOutlet UITextField *passwordText;
 
 @end
 
@@ -24,14 +26,47 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)pushedSignUpButton:(id)sender {
+    UIAlertView *alert;
+    //make sure not empty
+    if([self.userNameText.text length]==0 || [self.passwordText.text length]==0){
+        alert = [[UIAlertView alloc] initWithTitle:@"Values missing" message:@"Enter all fields" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
+    
     NSMutableDictionary *creds;
     NSMutableArray *usernames;
-    NSArray *prevUserNames;
-    NSUserDefaults *defaults;
-    //make sure not already in userdefaults
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    creds = [[defaults objectForKey:@"credentials"] mutableCopy];
+    usernames = [[defaults objectForKey:@"usernames"] mutableCopy];
+    
+    //make sure not already in userdefaults
+    for(NSString *x in usernames){
+        if([x caseInsensitiveCompare: self.userNameText.text])
+        {
+            alert = [[UIAlertView alloc] initWithTitle:@"Username Claimed" message:@"Try a different username" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+            return;
+        }
+    }
     
     //add to user defaults
+    if([creds count] == 0)
+    {
+        creds = [[NSMutableDictionary alloc] init];
+        usernames = [[NSMutableArray alloc] init];
+    }
+    [creds setValue:self.passwordText.text forKey:[self.userNameText.text lowercaseString]];
+    [usernames addObject:self.userNameText.text];
+    
+    [defaults setValue:creds forKey:@"credentials"];
+    [defaults setValue:usernames forKey:@"usernames"];
+    [defaults synchronize];
+    
+    NSLog(@"%@", creds);
+    [self performSegueWithIdentifier:@"LoginSignupSegue" sender:self];
 }
 
 /*

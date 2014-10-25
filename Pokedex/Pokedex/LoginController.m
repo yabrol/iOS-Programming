@@ -9,6 +9,8 @@
 #import "LoginController.h"
 
 @interface LoginController ()
+@property (strong, nonatomic) IBOutlet UITextField *usernameText;
+@property (strong, nonatomic) IBOutlet UITextField *passwordText;
 
 @end
 
@@ -25,17 +27,42 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)pushedLoginButton:(id)sender {
-    //check if credentials correct
-    NSDictionary *credentials;
-    NSArray *users;
-    NSString *username = @"";
-    
-    if(username.length < 1){
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No User" message:@"There is no user, sign up" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    UIAlertView *alert;
+    //make sure not empty
+    if([self.usernameText.text length]==0 || [self.passwordText.text length]==0){
+        alert = [[UIAlertView alloc] initWithTitle:@"Values missing" message:@"Enter all fields" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
+        return;
     }
     
-    [self performSegueWithIdentifier:@"LoginSegue" sender:self];
+    NSMutableDictionary *creds;
+    NSMutableArray *usernames;
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    creds = [[defaults objectForKey:@"credentials"] mutableCopy];
+    usernames = [[defaults objectForKey:@"usernames"] mutableCopy];
+    NSString *realpw = @"";
+    //make sure already in userdefaults
+    for(NSString *x in usernames){
+        if([x caseInsensitiveCompare: self.usernameText.text])
+        {
+            //check if pw correct
+            realpw = [creds objectForKey:[x lowercaseString]];
+            if([self.passwordText.text isEqualToString:realpw]){
+                NSLog(@"%@", creds);
+                [self performSegueWithIdentifier:@"LoginSegue" sender:self];
+            }
+            alert = [[UIAlertView alloc] initWithTitle:@"Wrong password" message:@"Try again" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+            return;
+        }
+    }
+    
+    //not there, send warning
+    alert = [[UIAlertView alloc] initWithTitle:@"No such username" message:@"Sign up" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+    return;
 }
 
 /*
