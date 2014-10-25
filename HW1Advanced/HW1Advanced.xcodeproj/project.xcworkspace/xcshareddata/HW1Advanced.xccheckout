@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>2818E784-A58D-4582-B350-BBAA7A9DCE3B</string>
+	<string>0D0EAD89-7BF8-43CE-8F06-EAC42C303C91</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Pokedex</string>
+	<string>HW1Advanced</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>65AE8161E5F1945B606457681217B71E72CD5252</key>
 		<string>https://github.com/yabrol/iOS-Porgamming.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Pokedex/Pokedex.xcodeproj</string>
+	<string>HW1Advanced/HW1Advanced.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>65AE8161E5F1945B606457681217B71E72CD5252</key>
