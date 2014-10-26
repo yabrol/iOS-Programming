@@ -47,7 +47,6 @@
         //check if pw correct
         realpw = [creds objectForKey:user];
         if([self.passwordText.text isEqualToString:realpw]){
-            NSLog(@"after login %@", creds);
             [self performSegueWithIdentifier:@"LoginSegue" sender:self];
             return;
         }
