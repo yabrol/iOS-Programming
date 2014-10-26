@@ -55,9 +55,9 @@
     {
         creds = [[NSMutableDictionary alloc] init];
     }
-    [creds setValue:self.passwordText.text forKey:[self.userNameText.text lowercaseString]];
+    [creds setObject:self.passwordText.text forKey:[self.userNameText.text lowercaseString]];
     
-    [defaults setValue:creds forKey:@"credentials"];
+    [defaults setObject:creds forKey:@"credentials"];
     [defaults synchronize];
     
     NSLog(@"signed up %@", creds);

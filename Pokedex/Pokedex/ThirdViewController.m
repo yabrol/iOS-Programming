@@ -20,7 +20,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)startThemeSongButton:(id)sender {
     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"themesong" ofType:@"mov"]];
     
     //need to do self.movieplayer else it dereferences it
@@ -32,11 +39,5 @@
     [self.moviePlayer setFullscreen:YES animated:YES];
     self.moviePlayer.shouldAutoplay = YES;
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end

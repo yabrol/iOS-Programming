@@ -43,8 +43,14 @@
     path = [[NSBundle mainBundle] pathForResource:@"info" ofType:@"csv"];
     text = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
     NSArray *allLines3 = [text componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-    NSLog(@"lines %@", allLines3);
     [self.desc addObjectsFromArray:allLines3];
+    
+    //save data for other views
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:self.names forKey:@"names"];
+    [defaults setObject:self.type forKey:@"types"];
+    [defaults setObject:self.desc forKey:@"desc"];
+    [defaults synchronize];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,6 +77,10 @@
     
     // Configure the cell...
     cell.textLabel.text = [self.names objectAtIndex:indexPath.row];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:indexPath forKey:@"indexPath"];
+    [defaults synchronize];
     
     return cell;
 }
