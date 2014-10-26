@@ -32,21 +32,19 @@
     NSString *text = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
     NSArray *allLines = [text componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     [self.names addObjectsFromArray:allLines];
-    NSLog(@"%@", self.names);
     
     self.type = [[NSMutableArray alloc] init];
     path = [[NSBundle mainBundle] pathForResource:@"types" ofType:@"csv"];
     text = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
     NSArray *allLines2 = [text componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-    [self.names addObjectsFromArray:allLines2];
-    NSLog(@"%@", self.type);
+    [self.type addObjectsFromArray:allLines2];
     
     self.desc = [[NSMutableArray alloc]init];
     path = [[NSBundle mainBundle] pathForResource:@"info" ofType:@"csv"];
     text = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
     NSArray *allLines3 = [text componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-    [self.names addObjectsFromArray:allLines3];
-    NSLog(@"%@", self.desc);
+    NSLog(@"lines %@", allLines3);
+    [self.desc addObjectsFromArray:allLines3];
 }
 
 - (void)didReceiveMemoryWarning {
