@@ -105,7 +105,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ftk-uO-dt0" kind="modal" id="bMO-hl-d7O"/>
+                                    <segue destination="ftk-uO-dt0" kind="modal" id="Qih-ER-XVB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Account? " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Bv-oO-Ath">
@@ -122,7 +122,7 @@
                     <connections>
                         <outlet property="passwordText" destination="DXa-9n-q98" id="xzG-k5-JXl"/>
                         <outlet property="usernameText" destination="MJq-Qs-nkH" id="wBR-wK-XxL"/>
-                        <segue destination="Ss5-cg-DdI" kind="push" id="4Wk-8w-6ka"/>
+                        <segue destination="Ss5-cg-DdI" kind="push" identifier="LoginSegue" id="20L-4l-yTw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fTT-jd-lvE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -204,7 +204,7 @@
                     <connections>
                         <outlet property="passwordText" destination="IKT-Oi-8qb" id="oml-Ve-fh2"/>
                         <outlet property="userNameText" destination="hUC-Sf-MGh" id="AXO-pm-EU4"/>
-                        <segue destination="Ss5-cg-DdI" kind="push" identifier="LoginSignupSegue" id="8x7-9n-2UY"/>
+                        <segue destination="Ss5-cg-DdI" kind="push" identifier="LoginSignupSegue" id="4Vn-nW-Tl4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LtM-8E-OVY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -288,7 +288,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="20L-4l-yTw"/>
         <segue reference="5bi-uE-B2J"/>
-        <segue reference="8x7-9n-2UY"/>
     </inferredMetricsTieBreakers>
 </document>

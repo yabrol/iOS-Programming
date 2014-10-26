@@ -36,27 +36,24 @@
     }
     
     NSMutableDictionary *creds;
-    NSMutableArray *usernames;
-    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    creds = [[defaults objectForKey:@"credentials"] mutableCopy];
-    usernames = [[defaults objectForKey:@"usernames"] mutableCopy];
+    creds = [[[defaults objectForKey:@"credentials"] mutableCopy]objectAtIndex:0];
+    NSString *user = [self.usernameText.text lowercaseString];
     NSString *realpw = @"";
     //make sure already in userdefaults
-    for(NSString *x in usernames){
-        if([x caseInsensitiveCompare: self.usernameText.text])
-        {
-            //check if pw correct
-            realpw = [creds objectForKey:[x lowercaseString]];
-            if([self.passwordText.text isEqualToString:realpw]){
-                NSLog(@"%@", creds);
-                [self performSegueWithIdentifier:@"LoginSegue" sender:self];
-            }
-            alert = [[UIAlertView alloc] initWithTitle:@"Wrong password" message:@"Try again" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alert show];
-            return;
+    NSLog(@"before login %@", creds);
+    if([creds objectForKey:user] != nil){
+        //check if pw correct
+        realpw = [creds objectForKey:user];
+        if([self.passwordText.text isEqualToString:realpw]){
+            NSLog(@"after login %@", creds);
+            [self performSegueWithIdentifier:@"LoginSegue" sender:self];
         }
+        alert = [[UIAlertView alloc] initWithTitle:@"Wrong password" message:@"Try again" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+
     }
     
     //not there, send warning

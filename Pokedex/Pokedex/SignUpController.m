@@ -35,37 +35,32 @@
     }
     
     NSMutableDictionary *creds;
-    NSMutableArray *usernames;
-    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    creds = [[defaults objectForKey:@"credentials"] mutableCopy];
-    usernames = [[defaults objectForKey:@"usernames"] mutableCopy];
+    creds = [[[defaults objectForKey:@"credentials"] mutableCopy] objectAtIndex:0];
+    NSString *user = [self.userNameText.text lowercaseString];
     
     //make sure not already in userdefaults
-    for(NSString *x in usernames){
-        if([x caseInsensitiveCompare: self.userNameText.text])
-        {
-            alert = [[UIAlertView alloc] initWithTitle:@"Username Claimed" message:@"Try a different username" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alert show];
-            return;
-        }
+    if([creds objectForKey:user] != nil)
+    {
+        alert = [[UIAlertView alloc] initWithTitle:@"Username Claimed" message:@"Try a different username" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
     }
+    
+    
     
     //add to user defaults
     if([creds count] == 0)
     {
         creds = [[NSMutableDictionary alloc] init];
-        usernames = [[NSMutableArray alloc] init];
     }
     [creds setValue:self.passwordText.text forKey:[self.userNameText.text lowercaseString]];
-    [usernames addObject:self.userNameText.text];
     
     [defaults setValue:creds forKey:@"credentials"];
-    [defaults setValue:usernames forKey:@"usernames"];
     [defaults synchronize];
     
-    NSLog(@"%@", creds);
+    NSLog(@"signed up %@", creds);
     [self performSegueWithIdentifier:@"LoginSignupSegue" sender:self];
 }
 
