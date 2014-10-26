@@ -25,7 +25,7 @@
     NSArray *typeList = [defaults objectForKey:@"types"];
     NSArray *descList = [defaults objectForKey:@"desc"];
     NSString *row = [defaults objectForKey:@"row"];
-    NSInteger *test = [row intValue];
+    int test = [row intValue];
     
     self.labelText.text = [NSString stringWithFormat:@"Name: %@ \nType: %@ \nDescription: %@",
                            [nameList objectAtIndex:test],

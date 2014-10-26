@@ -47,10 +47,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Image" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="imageView" destination="JkK-0K-xfp" id="3fd-2s-DLd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2098" y="17"/>
+            <point key="canvasLocation" x="2098" y="25"/>
         </scene>
         <!--Video-->
         <scene sceneID="AJ7-yM-bs1">

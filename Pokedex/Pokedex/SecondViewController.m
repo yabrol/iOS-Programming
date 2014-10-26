@@ -9,6 +9,7 @@
 #import "SecondViewController.h"
 
 @interface SecondViewController ()
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -20,6 +21,26 @@
     
     //get info
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *row = [defaults objectForKey:@"row"];
+    int test = [row intValue];
+    test +=1;
+    NSString *num;
+    if (test < 100) {
+        if (test < 10) {
+            num = [NSString stringWithFormat:@"00%i", test];
+        }
+        else
+        {
+            num = [NSString stringWithFormat:@"0%i",test];
+        }
+    }
+    else{
+        num = [NSString stringWithFormat:@"%i",test];
+    }
+    NSString *path = [NSString stringWithFormat:@"%@.jpg",num];
+    
+    [self.imageView setImage:[UIImage imageNamed:path]];
     
 }
 
