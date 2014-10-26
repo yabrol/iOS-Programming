@@ -44,6 +44,13 @@
     text = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
     NSArray *allLines3 = [text componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     [self.desc addObjectsFromArray:allLines3];
+    
+    //save data for other views
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:self.names forKey:@"names"];
+    [defaults setObject:self.type forKey:@"types"];
+    [defaults setObject:self.desc forKey:@"desc"];
+    [defaults synchronize];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,14 +78,14 @@
     // Configure the cell...
     cell.textLabel.text = [self.names objectAtIndex:indexPath.row];
     
-    //save data for other views
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:[self.names objectAtIndex:indexPath.row] forKey:@"names"];
-    [defaults setObject:[self.type objectAtIndex:indexPath.row] forKey:@"types"];
-    [defaults setObject:[self.desc objectAtIndex:indexPath.row] forKey:@"desc"];
-    [defaults synchronize];
-    
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
+    [defaults setObject:text forKey:@"row"];
+    [defaults synchronize];
 }
 
 /*

@@ -9,6 +9,7 @@
 #import "FirstViewController.h"
 
 @interface FirstViewController ()
+@property (strong, nonatomic) IBOutlet UITextView *labelText;
 
 @end
 
@@ -17,6 +18,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    //get info
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSArray *nameList = [defaults objectForKey:@"names"];
+    NSArray *typeList = [defaults objectForKey:@"types"];
+    NSArray *descList = [defaults objectForKey:@"desc"];
+    NSString *row = [defaults objectForKey:@"row"];
+    NSInteger *test = [row intValue];
+    
+    self.labelText.text = [NSString stringWithFormat:@"Name: %@ \nType: %@ \nDescription: %@",
+                           [nameList objectAtIndex:test],
+                           [typeList objectAtIndex:test],
+                           [descList objectAtIndex:test]];
+    
 }
 
 - (void)didReceiveMemoryWarning {
