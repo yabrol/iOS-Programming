@@ -28,20 +28,24 @@
     
     //get names
     self.names = [[NSMutableArray alloc]init];
-    self.type = [[NSMutableArray alloc] init];
-    self.desc = [[NSMutableArray alloc]init];
-    
     NSString *path = [[NSBundle mainBundle] pathForResource:@"name" ofType:@"csv"];
     NSString *text = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-    NSLog(@"text %@", text);
     NSArray *allLines = [text componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-    NSLog(@"lines %@", allLines);
-    
     [self.names addObjectsFromArray:allLines];
     NSLog(@"%@", self.names);
     
-    
+    self.type = [[NSMutableArray alloc] init];
+    path = [[NSBundle mainBundle] pathForResource:@"types" ofType:@"csv"];
+    text = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    NSArray *allLines2 = [text componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    [self.names addObjectsFromArray:allLines2];
     NSLog(@"%@", self.type);
+    
+    self.desc = [[NSMutableArray alloc]init];
+    path = [[NSBundle mainBundle] pathForResource:@"info" ofType:@"csv"];
+    text = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    NSArray *allLines3 = [text componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    [self.names addObjectsFromArray:allLines3];
     NSLog(@"%@", self.desc);
 }
 
