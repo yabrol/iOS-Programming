@@ -20,24 +20,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSURL *theurl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"themesong" ofType:@"mov"]];
+    
+    self.moviePlayer=[[MPMoviePlayerController alloc] initWithContentURL:theurl];
+    [self.moviePlayer.view setFrame:CGRectMake(40, 197, 240, 160)];
+    [self.moviePlayer prepareToPlay];
+    [self.moviePlayer setShouldAutoplay:NO]; // And other options you can look through the documentation.
+    [self.view addSubview:self.moviePlayer.view];
+    //5. To control what is to be done after playback:
+    
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playBackFinished:) name:MPMoviePlayerPlaybackDidFinishNotification object:moviePlayer];
+    //playBackFinished will be your own method.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)startThemeSongButton:(id)sender {
-    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"themesong" ofType:@"mov"]];
-    
-    //need to do self.movieplayer else it dereferences it
-    self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:url];
-    
-    [self.view addSubview:self.moviePlayer.view];
-    
-    //self.moviePlayer.fullscreen = YES;
-    [self.moviePlayer setFullscreen:YES animated:YES];
-    self.moviePlayer.shouldAutoplay = YES;
 }
 
 @end
