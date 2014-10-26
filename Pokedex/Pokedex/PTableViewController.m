@@ -9,6 +9,9 @@
 #import "PTableViewController.h"
 
 @interface PTableViewController ()
+@property (strong,nonatomic) NSMutableArray *names;
+@property (strong, nonatomic) NSMutableArray *type;
+@property (strong, nonatomic) NSMutableArray *desc;
 
 @end
 
@@ -17,6 +20,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    //get names
+    self.names = [[NSMutableArray alloc]init];
+    self.type = [[NSMutableArray alloc] init];
+    self.desc = [[NSMutableArray alloc]init];
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"name" ofType:@"csv"];
+    NSString *text = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    NSLog(@"text %@", text);
+    NSArray *allLines = [text componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    NSLog(@"lines %@", allLines);
+    
+    [self.names addObjectsFromArray:allLines];
+    NSLog(@"%@", self.names);
+    
+    
+    NSLog(@"%@", self.type);
+    NSLog(@"%@", self.desc);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,18 +59,19 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 150;
+    return 151;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     // Configure the cell...
+    cell.textLabel.text = [self.names objectAtIndex:indexPath.row];
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
