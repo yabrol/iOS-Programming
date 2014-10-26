@@ -49,6 +49,7 @@
         if([self.passwordText.text isEqualToString:realpw]){
             NSLog(@"after login %@", creds);
             [self performSegueWithIdentifier:@"LoginSegue" sender:self];
+            return;
         }
         alert = [[UIAlertView alloc] initWithTitle:@"Wrong password" message:@"Try again" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
