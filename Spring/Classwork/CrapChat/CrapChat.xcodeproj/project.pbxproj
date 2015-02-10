@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB33556B1A804287008C4223 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33556A1A804287008C4223 /* main.m */; };
+		BB33556E1A804287008C4223 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB33556D1A804287008C4223 /* AppDelegate.m */; };
+		BB3355711A804287008C4223 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3355701A804287008C4223 /* ViewController.m */; };
+		BB3355741A804287008C4223 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB3355721A804287008C4223 /* Main.storyboard */; };
+		BB3355761A804287008C4223 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB3355751A804287008C4223 /* Images.xcassets */; };
+		BB3355791A804287008C4223 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB3355771A804287008C4223 /* LaunchScreen.xib */; };
+		BB3355851A804287008C4223 /* CrapChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3355841A804287008C4223 /* CrapChatTests.m */; };
+		BB33558F1A804786008C4223 /* pic.png in Resources */ = {isa = PBXBuildFile; fileRef = BB33558E1A804786008C4223 /* pic.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB33557F1A804287008C4223 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB33555D1A804287008C4223 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB3355641A804287008C4223;
+			remoteInfo = CrapChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BB3355651A804287008C4223 /* CrapChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrapChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB3355691A804287008C4223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB33556A1A804287008C4223 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BB33556C1A804287008C4223 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BB33556D1A804287008C4223 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BB33556F1A804287008C4223 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BB3355701A804287008C4223 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BB3355731A804287008C4223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BB3355751A804287008C4223 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BB3355781A804287008C4223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BB33557E1A804287008C4223 /* CrapChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrapChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB3355831A804287008C4223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB3355841A804287008C4223 /* CrapChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrapChatTests.m; sourceTree = "<group>"; };
+		BB33558E1A804786008C4223 /* pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB3355621A804287008C4223 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB33557B1A804287008C4223 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB33555C1A804287008C4223 = {
+			isa = PBXGroup;
+			children = (
+				BB3355671A804287008C4223 /* CrapChat */,
+				BB3355811A804287008C4223 /* CrapChatTests */,
+				BB3355661A804287008C4223 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BB3355661A804287008C4223 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB3355651A804287008C4223 /* CrapChat.app */,
+				BB33557E1A804287008C4223 /* CrapChatTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB3355671A804287008C4223 /* CrapChat */ = {
+			isa = PBXGroup;
+			children = (
+				BB33558E1A804786008C4223 /* pic.png */,
+				BB33556C1A804287008C4223 /* AppDelegate.h */,
+				BB33556D1A804287008C4223 /* AppDelegate.m */,
+				BB33556F1A804287008C4223 /* ViewController.h */,
+				BB3355701A804287008C4223 /* ViewController.m */,
+				BB3355721A804287008C4223 /* Main.storyboard */,
+				BB3355751A804287008C4223 /* Images.xcassets */,
+				BB3355771A804287008C4223 /* LaunchScreen.xib */,
+				BB3355681A804287008C4223 /* Supporting Files */,
+			);
+			path = CrapChat;
+			sourceTree = "<group>";
+		};
+		BB3355681A804287008C4223 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB3355691A804287008C4223 /* Info.plist */,
+				BB33556A1A804287008C4223 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BB3355811A804287008C4223 /* CrapChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB3355841A804287008C4223 /* CrapChatTests.m */,
+				BB3355821A804287008C4223 /* Supporting Files */,
+			);
+			path = CrapChatTests;
+			sourceTree = "<group>";
+		};
+		BB3355821A804287008C4223 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB3355831A804287008C4223 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB3355641A804287008C4223 /* CrapChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB3355881A804287008C4223 /* Build configuration list for PBXNativeTarget "CrapChat" */;
+			buildPhases = (
+				BB3355611A804287008C4223 /* Sources */,
+				BB3355621A804287008C4223 /* Frameworks */,
+				BB3355631A804287008C4223 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CrapChat;
+			productName = CrapChat;
+			productReference = BB3355651A804287008C4223 /* CrapChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BB33557D1A804287008C4223 /* CrapChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB33558B1A804287008C4223 /* Build configuration list for PBXNativeTarget "CrapChatTests" */;
+			buildPhases = (
+				BB33557A1A804287008C4223 /* Sources */,
+				BB33557B1A804287008C4223 /* Frameworks */,
+				BB33557C1A804287008C4223 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB3355801A804287008C4223 /* PBXTargetDependency */,
+			);
+			name = CrapChatTests;
+			productName = CrapChatTests;
+			productReference = BB33557E1A804287008C4223 /* CrapChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB33555D1A804287008C4223 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Yukti;
+				TargetAttributes = {
+					BB3355641A804287008C4223 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					BB33557D1A804287008C4223 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = BB3355641A804287008C4223;
+					};
+				};
+			};
+			buildConfigurationList = BB3355601A804287008C4223 /* Build configuration list for PBXProject "CrapChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BB33555C1A804287008C4223;
+			productRefGroup = BB3355661A804287008C4223 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB3355641A804287008C4223 /* CrapChat */,
+				BB33557D1A804287008C4223 /* CrapChatTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB3355631A804287008C4223 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB3355741A804287008C4223 /* Main.storyboard in Resources */,
+				BB3355791A804287008C4223 /* LaunchScreen.xib in Resources */,
+				BB33558F1A804786008C4223 /* pic.png in Resources */,
+				BB3355761A804287008C4223 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB33557C1A804287008C4223 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB3355611A804287008C4223 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB3355711A804287008C4223 /* ViewController.m in Sources */,
+				BB33556E1A804287008C4223 /* AppDelegate.m in Sources */,
+				BB33556B1A804287008C4223 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB33557A1A804287008C4223 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB3355851A804287008C4223 /* CrapChatTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB3355801A804287008C4223 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB3355641A804287008C4223 /* CrapChat */;
+			targetProxy = BB33557F1A804287008C4223 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BB3355721A804287008C4223 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB3355731A804287008C4223 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BB3355771A804287008C4223 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB3355781A804287008C4223 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BB3355861A804287008C4223 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BB3355871A804287008C4223 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB3355891A804287008C4223 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CrapChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BB33558A1A804287008C4223 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CrapChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BB33558C1A804287008C4223 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CrapChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrapChat.app/CrapChat";
+			};
+			name = Debug;
+		};
+		BB33558D1A804287008C4223 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CrapChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrapChat.app/CrapChat";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB3355601A804287008C4223 /* Build configuration list for PBXProject "CrapChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB3355861A804287008C4223 /* Debug */,
+				BB3355871A804287008C4223 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB3355881A804287008C4223 /* Build configuration list for PBXNativeTarget "CrapChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB3355891A804287008C4223 /* Debug */,
+				BB33558A1A804287008C4223 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BB33558B1A804287008C4223 /* Build configuration list for PBXNativeTarget "CrapChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB33558C1A804287008C4223 /* Debug */,
+				BB33558D1A804287008C4223 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB33555D1A804287008C4223 /* Project object */;
+}
