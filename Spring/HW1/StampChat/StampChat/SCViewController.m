@@ -134,13 +134,15 @@
     
             //move the center of the text field by the same amount that the finger moved
             self.theTextField.center = CGPointMake(self.theTextField.center.x + dx, self.theTextField.center.y + dy);
-
+            
             //set oldTouchPoint
             self.oldTouchPoint = newTouchPoint;
+            
             break;
         }
-        default:
+        default:{
             break;
+        }
     }
 }
 
@@ -224,7 +226,59 @@
     [self.fontTableView reloadData];
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    mouseSwiped = NO;
+    UITouch *touch = [touches anyObject];
+    lastPoint = [touch locationInView:self.view];
+}
 
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    mouseSwiped = YES;
+    UITouch *touch = [touches anyObject];
+    CGPoint currentPoint = [touch locationInView:self.view];
+    
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [self.tempDrawImage.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
+    CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
+    CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
+    CGContextSetLineWidth(UIGraphicsGetCurrentContext(), brush );
+    CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), red, green, blue, 1.0);
+    CGContextSetBlendMode(UIGraphicsGetCurrentContext(),kCGBlendModeNormal);
+    
+    CGContextStrokePath(UIGraphicsGetCurrentContext());
+    self.tempDrawImage.image = UIGraphicsGetImageFromCurrentImageContext();
+    [self.tempDrawImage setAlpha:opacity];
+    UIGraphicsEndImageContext();
+    
+    lastPoint = currentPoint;
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    if(!mouseSwiped) {
+        UIGraphicsBeginImageContext(self.view.frame.size);
+        [self.tempDrawImage.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
+        CGContextSetLineWidth(UIGraphicsGetCurrentContext(), brush);
+        CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), red, green, blue, opacity);
+        CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
+        CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
+        CGContextStrokePath(UIGraphicsGetCurrentContext());
+        CGContextFlush(UIGraphicsGetCurrentContext());
+        self.tempDrawImage.image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+    }
+    
+    UIGraphicsBeginImageContext(self.theImageView.frame.size);
+    [self.theImageView.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) blendMode:kCGBlendModeNormal alpha:1.0];
+    [self.tempDrawImage.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) blendMode:kCGBlendModeNormal alpha:opacity];
+    self.theImageView.image = UIGraphicsGetImageFromCurrentImageContext();
+    self.tempDrawImage.image = nil;
+    UIGraphicsEndImageContext();
+}
 
 - (IBAction)textFieldDidEndOnExit:(id)sender {
     [sender resignFirstResponder];    //hide the keyboard
