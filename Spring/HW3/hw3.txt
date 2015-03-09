@@ -1,0 +1,11 @@
+This week's assignment is a little more open-ended than those in the past. The assignment is to play around and do interesting things with video, now that you have the power. Use my commented code as a base, and make an app that does some interesting/challenging things with video.
+ 
+Here are some ideas:
+ 
+- make some interesting "filters" by messing with the pixels BGRA values like we did today
+- add a watermark to the video, which is also possible using pixel processing
+- implement "pause-and-go" recording, like Vine and Instagram have, where you can record a few segments
+- allow user to "draw" on the video (using gesture recognizer + pixel processing)
+ 
+Be creative! There's no end to what you can do with this assignment, and I hope to start the next class off by showing everybody's work. There's no minimal requirement for this assignment, just common sense about putting in a solid effort and knowing your work will be shown in class.
+ 
