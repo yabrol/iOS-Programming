@@ -1,0 +1,13 @@
+For assignment 2, due midnight on Sunday 2/22, draw on the code from Lecture 1, Assignment 1 and Lecture 2, to create a more complete version version of Crap Chat. The new version should allow the user to 
+ 
+1. take a picture (requires device)
+2. add text and move that around
+3. draw on the picture
+4. stamp the location of the device onto the picture
+5. stamp the orientation of the device (numerical x,y,z values from accelerometer) onto the picture
+6. save the picture to PhotoRoll and/or email it (requires device)
+ 
+You'll need to google and use Stack Overflow to figure out how to email the photo. Hint: you can use MFMailComposerViewController, and post on Piazza for help from your peers.
+ 
+Feel free to refer or even start from our TA's code from Assignment 1 from last year, available here: PhotoEditor.zip (Code courtesy of Tom Peng.)
+ 

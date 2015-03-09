@@ -1,0 +1,22 @@
+There are two parts to this week's assignment:
+ 
+1. Build an app onto your iOS device
+2. Extend the commented code above as specified below
+ 
+For part 1, you will need to request a certificate for your laptop if you haven't already, and have the request approved (by me). You'll also need to send me the UDID for your device so I can add it. I'll create at that point a provisioning profile that includes both your certificate and your UDID and then you should be able to build the app that way. If you have trouble with this, please ask for help from a fellow student or from Brandon. It would be great if at the start of the second lecture, everybody was able to build right onto their devices.
+ 
+For part 2, there are two ways to complete this assignment:
+1. The minimal way
+2. Like a badass
+ 
+Either way is enough to get credit for the assignment, but if you really want to make something of your life, try to be a badass!
+ 
+To complete the assignment the minimal way: start with the commented code (StampChat), and extend it to show the path of the center of the UITextField as it is dragged around, and have that path printed ("stamped") into the UIImage before it is saved to the PhotoRoll. This will show that you've figured out how to draw a path and integrate that into the existing code base.
+ 
+Here is a relevant tutorial that should provide a bunch of hints for completing this assignment:
+http://www.raywenderlich.com/18840/how-to-make-a-simple-drawing-app-with-uikit
+ 
+To complete this assignment like a badass: go nuts making the app as much like the SnapChat photo editing screen as possible: allow the user to choose between adding text and drawing, allow the user to choose a color for drawing, etc. Again, please start from the commented code (StampChat), deviating from it as much as you find necessary.
+ 
+If you're struggling, just complete the assignment in the minimal way. To do this, simply go through the entire tutorial linked to above, adapting it to iOS 8 and XCode 6 as necessary and asking questions on Piazza when you're stuck. Although you can just download the code to the assignment at the end of the tutorial, you're expected to recreate the relevant functionality starting StampChat.
+  
