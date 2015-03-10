@@ -15,6 +15,8 @@
 		BBFE81391AAE55CB00EB7BD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBFE81381AAE55CB00EB7BD1 /* Images.xcassets */; };
 		BBFE813C1AAE55CB00EB7BD1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBFE813A1AAE55CB00EB7BD1 /* LaunchScreen.xib */; };
 		BBFE81481AAE55CB00EB7BD1 /* CrappyBirdTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFE81471AAE55CB00EB7BD1 /* CrappyBirdTests.m */; };
+		BBFE81531AAE648800EB7BD1 /* CPPipeSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFE81521AAE648800EB7BD1 /* CPPipeSpriteNode.m */; };
+		BBFE81551AAE76EE00EB7BD1 /* punch3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BBFE81541AAE76EE00EB7BD1 /* punch3.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,9 @@
 		BBFE81411AAE55CB00EB7BD1 /* CrappyBirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrappyBirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBFE81461AAE55CB00EB7BD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBFE81471AAE55CB00EB7BD1 /* CrappyBirdTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrappyBirdTests.m; sourceTree = "<group>"; };
+		BBFE81511AAE648800EB7BD1 /* CPPipeSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPPipeSpriteNode.h; sourceTree = "<group>"; };
+		BBFE81521AAE648800EB7BD1 /* CPPipeSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPPipeSpriteNode.m; sourceTree = "<group>"; };
+		BBFE81541AAE76EE00EB7BD1 /* punch3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = punch3.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +93,9 @@
 				BBFE812B1AAE55CB00EB7BD1 /* AppDelegate.m */,
 				BBFE812D1AAE55CB00EB7BD1 /* GameScene.h */,
 				BBFE812E1AAE55CB00EB7BD1 /* GameScene.m */,
+				BBFE81511AAE648800EB7BD1 /* CPPipeSpriteNode.h */,
+				BBFE81521AAE648800EB7BD1 /* CPPipeSpriteNode.m */,
+				BBFE81541AAE76EE00EB7BD1 /* punch3.mp3 */,
 				BBFE81321AAE55CB00EB7BD1 /* GameViewController.h */,
 				BBFE81331AAE55CB00EB7BD1 /* GameViewController.m */,
 				BBFE81351AAE55CB00EB7BD1 /* Main.storyboard */,
@@ -205,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBFE813C1AAE55CB00EB7BD1 /* LaunchScreen.xib in Resources */,
+				BBFE81551AAE76EE00EB7BD1 /* punch3.mp3 in Resources */,
 				BBFE81391AAE55CB00EB7BD1 /* Images.xcassets in Resources */,
 				BBFE81371AAE55CB00EB7BD1 /* Main.storyboard in Resources */,
 			);
@@ -228,6 +237,7 @@
 				BBFE812C1AAE55CB00EB7BD1 /* AppDelegate.m in Sources */,
 				BBFE812F1AAE55CB00EB7BD1 /* GameScene.m in Sources */,
 				BBFE81291AAE55CB00EB7BD1 /* main.m in Sources */,
+				BBFE81531AAE648800EB7BD1 /* CPPipeSpriteNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,6 +22,9 @@
     /* Sprite Kit applies additional optimizations to improve rendering performance */
     skView.ignoresSiblingOrder = YES;
     
+    GameScene *gameScene = [[GameScene alloc]initWithSize:self.view.bounds.size];
+    [skView presentScene:gameScene];
+    
 }
 
 - (BOOL)shouldAutorotate
